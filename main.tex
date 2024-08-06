@@ -13,129 +13,128 @@
 
 \begin{document}
 
-\maketitle
+    \maketitle
 
-\section{Введение}
+    \section{Введение}
 
-\begin{frame}{Пакет Beamer для подготовки презентации}
-\begin{itemize}
-\item Предполагается, что вы умеете пользоваться \LaTeX, если это не так, вы можете начать
-\href{https://www.latex-project.org/}{ознакомление с ним здесь}.
-\item Beamer --- один из самых популярных и мощных пакетов для подготовки презентаций в \LaTeX.
-\item У пакета Beamer есть подробное
-\href{http://www.ctan.org/tex-archive/macros/latex/contrib/beamer/doc/beameruserguide.pdf}{руководство пользователя}.
-\item Данная презентация представляет из себя шаблон/пример, подготовленный с использованием пакета Beamer с фирменной символикой СПбГУ.
-\end{itemize}
-\end{frame}
+    \begin{frame}{Пакет Beamer для подготовки презентации}
+        \begin{itemize}
+            \item Предполагается, что вы умеете пользоваться \LaTeX, если это не так, вы можете начать
+                \href{https://www.latex-project.org/}{ознакомление с ним здесь}.
+            \item Beamer --- один из самых популярных и мощных пакетов для подготовки презентаций в \LaTeX.
+            \item У пакета Beamer есть подробное
+                \href{http://www.ctan.org/tex-archive/macros/latex/contrib/beamer/doc/beameruserguide.pdf}{руководство пользователя}.
+            \item Данная презентация представляет из себя шаблон/пример, подготовленный с использованием пакета Beamer с фирменной символикой СПбГУ.
+        \end{itemize}
+    \end{frame}
 
-\section{Редактирование}
+    \section{Редактирование}
 
-\begin{frame}[fragile]{Использование Beamer}
-Для создания простейшего документа с использованием пакета Beamer достаточно воспользоваться следующим кодом:
-\begin{block}{Минимальный документ}
-\begin{lstlisting}[language=TeX]
+    \begin{frame}[fragile]{Использование Beamer}
+        Для создания простейшего документа с использованием пакета Beamer достаточно воспользоваться следующим кодом:
+        \begin{block}{Минимальный документ}
+            \begin{lstlisting}[language=TeX]
 \documentclass{beamer}
 \begin{document}
-\begin{frame}{Hello, world!}
-\end {frame}
+    \begin{frame}{Hello, world!}
+    \end {frame}
 \end{document}
-\end{lstlisting}
-\end{block}
-\end{frame}
+            \end{lstlisting}
+        \end{block}
+    \end{frame}
 
-\begin{frame}[fragile]{Титульный слайд}
-	Чтобы отобразить информацию на титульном слайде, необходимо вызвать несколько команд в преамбуле:
-	\begin{block}{Команды для вывода информации на титульный слайд}
-\begin{lstlisting}[language=TeX]
+    \begin{frame}[fragile]{Титульный слайд}
+        Чтобы отобразить информацию на титульном слайде, необходимо вызвать несколько команд в преамбуле:
+        \begin{block}{Команды для вывода информации на титульный слайд}
+            \begin{lstlisting}[language=TeX]
 \title{Title}
 \subtitle{Subtitle}
 \author{First Author, Second Author}
 \date{Defaults to today's}
-\end{lstlisting}
-	\end{block}
-	Затем, после команды \verb|\begin{document}|, необходимо написать команду \verb|\maketitle|.
-\end{frame}
+            \end{lstlisting}
+        \end{block}
+        Затем, после команды \verb|\begin{document}|, необходимо написать команду \verb|\maketitle|.
+    \end{frame}
 
-\begin{frame}[fragile]{Создание слайда с информацией}
-	\framesubtitle{Руководство}
-	Для создания простого слайда, необходимо воспользоваться следующим кодом:
-	\begin{block}{Код для создания слайда}
-\begin{lstlisting}[language=TeX]
+    \begin{frame}[fragile]{Создание слайда с информацией}
+        \framesubtitle{Руководство}
+        Для создания простого слайда, необходимо воспользоваться следующим кодом:
+        \begin{block}{Код для создания слайда}
+            \begin{lstlisting}[language=TeX]
 \begin{frame}
-	\frametitle{Slide example}
-	\framesubtitle{Result}
+    \frametitle{Slide example}
+    \framesubtitle{Result}
 \end{frame}\end{lstlisting}
-	\end{block}
-	Результат представлен на следующем слайде.
-	
-	p.s. Для возможности использования русского текста в листинге, можно воспользоваться пакетом \href{https://ctan.org/pkg/listingsutf8?lang=en}{listingsutf8}.
-\end{frame}
+        \end{block}
+        Результат представлен на следующем слайде.
 
-\begin{frame}
-	\frametitle{Slide example}
-	\framesubtitle{Result}
-\end{frame}
+        p.s. Для возможности использования русского текста в листинге, можно воспользоваться пакетом \href{https://ctan.org/pkg/listingsutf8?lang=en}{listingsutf8}.
+    \end{frame}
 
-\begin{frame}[fragile]{Добавление изображений}
-\begin{columns}
-\begin{column}{0.7\textwidth}
-Добавление изображений работает как в стандартном \LaTeX:
-\begin{block}{Добавление изображения}
-\begin{lstlisting}[language=TeX]
+    \begin{frame}
+        \frametitle{Slide example}
+        \framesubtitle{Result}
+    \end{frame}
+
+    \begin{frame}[fragile]{Добавление изображений}
+        \begin{columns}
+            \begin{column}{0.7\textwidth}
+                Добавление изображений работает как в стандартном \LaTeX:
+                \begin{block}{Добавление изображения}
+                    \begin{lstlisting}[language=TeX]
 \usepackage{graphicx}
 % ...
 \includegraphics
 [width=\textwidth]{images/default}
-\end{lstlisting}
-\end{block}
-\end{column}
-\begin{column}{0.3\textwidth}
-\includegraphics[width=\textwidth]{source/logo-name}\\
-\end{column}
-\end{columns}
-\end{frame}
+                    \end{lstlisting}
+                \end{block}
+            \end{column}
+            \begin{column}{0.3\textwidth}
+                \includegraphics[width=\textwidth]{source/logo-name}\\
+            \end{column}
+        \end{columns}
+    \end{frame}
 
-\begin{frame}[fragile]{Добавление формул}
-	Формулы добавляются также как и в стандартном \LaTeX:
-	\begin{itemize}
-		\item Строчные формулы добавляются с использованием символа доллар (\$), например\\
-		\verb|$\Delta =\nabla^{2}$|: $\Delta =\nabla^{2}$.
-		\item Вынесенные формулы добавляются, например с помощью двух символов доллара, либо с использованием окружения \verb|equation|, любо любым другим предпочтительным для вас способом.
-	\end{itemize}
-\end{frame}
+    \begin{frame}[fragile]{Добавление формул}
+        Формулы добавляются также как и в стандартном \LaTeX:
+        \begin{itemize}
+            \item Строчные формулы добавляются с использованием символа доллар (\$), например\\
+            \verb|$\Delta =\nabla^{2}$|: $\Delta =\nabla^{2}$.
+            \item Вынесенные формулы добавляются, например с помощью двух символов доллара, либо с использованием окружения
+            \verb|equation|, любо любым другим предпочтительным для вас способом.
+        \end{itemize}
+    \end{frame}
 
-\begin{frame}[fragile]{Добавление формул}
-	\framesubtitle{Пример вынесенной формулы}
-	
-	\begin{block}{Добавление вынесенной формулы}
-\begin{lstlisting}[language=TeX]
+    \begin{frame}[fragile]{Добавление формул}
+        \framesubtitle{Пример вынесенной формулы}
+
+        \begin{block}{Добавление вынесенной формулы}
+            \begin{lstlisting}[language=TeX]
 \begin{equation}
-	\frac{\partial u}{\partial t}
-	-a^2\left(\frac{\partial^2 u}{\partial x^2_1}
-	+\frac{\partial^2 u}{\partial x^2_2}
-	+\ldots+\frac{\partial^2 u}{\partial x^2_n}\right)=f\left(x,t\right).
-	\label{eq:eq1}
+    \frac{\partial u}{\partial t}
+    -a^2\left(\frac{\partial^2 u}{\partial x^2_1}
+    +\frac{\partial^2 u}{\partial x^2_2}
+    +\ldots+\frac{\partial^2 u}{\partial x^2_n}\right)=f\left(x,t\right).
+    \label{eq:eq1}
 \end{equation}
-\end{lstlisting}
-	\end{block}
-	
-	Результат:
-	
-	\begin{equation}
-		\frac{\partial u}{\partial t}
-		-a^2\left(\frac{\partial^2 u}{\partial x^2_1}
-		+\frac{\partial^2 u}{\partial x^2_2}
-		+\ldots+\frac{\partial^2 u}{\partial x^2_n}\right)=f\left(x,t\right).
-		\label{eq:eq1}
-	\end{equation}
-	
-	Ссылка на формулу (\ref{eq:eq1}).
-\end{frame}
+            \end{lstlisting}
+        \end{block}
 
-\begin{frame}[fragile]{Разделение на столбцы}
-Разделение информации на столбцы осуществляется следующим способом
-\begin{block}{Разделение информации на столбцы}
-\begin{lstlisting}[language=TeX]
+        Результат:
+        \begin{equation}
+            \frac{\partial u}{\partial t}
+            -a^2\left(\frac{\partial^2 u}{\partial x^2_1}
+            +\frac{\partial^2 u}{\partial x^2_2}
+            +\ldots+\frac{\partial^2 u}{\partial x^2_n}\right)=f\left(x,t\right).
+            \label{eq:eq1}
+        \end{equation}
+        Ссылка на формулу (\ref{eq:eq1}).
+    \end{frame}
+
+    \begin{frame}[fragile]{Разделение на столбцы}
+        Разделение информации на столбцы осуществляется следующим способом
+        \begin{block}{Разделение информации на столбцы}
+            \begin{lstlisting}[language=TeX]
 \begin{columns}
     \begin{column}{0.6\textwidth}
         This is the first column
@@ -145,43 +144,41 @@
     \end{column}
     % There could be more!
 \end{columns}
-\end{lstlisting}
-\end{block}
+            \end{lstlisting}
+        \end{block}
 
-Далее представлен результат:
+        Далее представлен результат:
+        \begin{columns}
+            \begin{column}{0.6\textwidth}
+                First column.
+            \end{column}
+            \begin{column}{0.3\textwidth}
+                Second column.
+            \end{column}
+        \end{columns}
+    \end{frame}
 
-\begin{columns}
-	\begin{column}{0.6\textwidth}
-		First column.
-	\end{column}
-	\begin{column}{0.3\textwidth}
-		Second column.
-	\end{column}
-\end{columns}
+    \begin{frame}[fragile]
+        \frametitle{Шрифты}
+        Для представления различной информации, уместно использовать соответствующие ей шрифты:
+        \begin{itemize}
+            \item {\verb|\textrm{}|: \textrm{стандартный шрифт.}}
+            \item {\verb|\textsf{}|: \textsf{Шрифт семейства sans-serif.}}
+            \item {\verb|\texttt{}|: \texttt{Моноширинный шрифт.}}
+        \end{itemize}
+    \end{frame}
 
-\end{frame}
+    \section{Заключение}
 
-\begin{frame}[fragile]
-\frametitle{Шрифты}
-Для представления различной информации, уместно использовать соответствующие ей шрифты:
-\begin{itemize}
-  \item {\verb|\textrm{}|: \textrm{стандартный шрифт.}}
-  \item {\verb|\textsf{}|: \textsf{Шрифт семейства sans-serif.}}
-  \item {\verb|\texttt{}|: \texttt{Моноширинный шрифт.}}
-\end{itemize}
-\end{frame}
+    \begin{frame}
+        \frametitle{Заключение}
+        \begin{itemize}
+            \item Автор будет рад, вашему вкладу в репозиторий на \href{github.com}{GitHub}.
+            \item Вопросы, пожелания предложения можно отправлять на
+            \href{mailto:gleb.alcybeev@gmail.com}{электронную почту}.
+        \end{itemize}
+    \end{frame}
 
-\section{Заключение}
-
-\begin{frame}
-\frametitle{Заключение}
-\begin{itemize}
-\item Автор будет рад, вашему вкладу в репозиторий на \href{github.com}{GitHub}.
-\item Вопросы, пожелания предложения можно отправлять на
-\href{mailto:gleb.alcybeev@gmail.com}{электронную почту}.
-\end{itemize}
-\end{frame}
-
-\backmatter
+    \backmatter
 
 \end{document}
