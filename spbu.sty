@@ -1,6 +1,12 @@
 \ProvidesPackage{spbu}[Beamer Theme for Saint Petersburg State University]
 
 % ================================================================================
+% Path
+% ================================================================================
+
+\newcommand{\imgpath}{source/}
+
+% ================================================================================
 % Packages
 % ================================================================================
 
@@ -110,7 +116,7 @@
 		% not display the headline for the title page
 	\else
 		\begin{beamercolorbox}[wd=\paperwidth,ht=40pt]{head}
-			\hspace{410pt}\vspace{4.7pt}\includegraphics[width=25pt]{source/logo-white.pdf}
+			\hspace{410pt}\vspace{4.7pt}\includegraphics[width=25pt]{\imgpath /logo-white.pdf}
 		\end{beamercolorbox}
 	\fi
 }
@@ -131,14 +137,14 @@
 \setbeamertemplate{title page}{
 	\begin{picture}(0,0)
 		\put(-18,64){
-			\includegraphics[width=130pt]{source/logo-name}
+			\includegraphics[width=130pt]{\imgpath /logo-name.pdf}
 		}
         \put(-5,-99){
             \begin{beamercolorbox}[wd=1.1\paperwidth,ht=155pt]{jumbo}
             \end{beamercolorbox}
         }
        	\put(250,-145){
-    		\includegraphics[width=160pt]{source/logo-lightred.pdf}
+    		\includegraphics[width=160pt]{\imgpath /logo-lightred.pdf}
    		}
 		\put(0,25){
 			\begin{minipage}{300pt}
@@ -186,7 +192,7 @@
 			\begin{beamercolorbox}[wd=1.1\paperwidth,ht=300pt]{jumbo}
 			\end{beamercolorbox}
 		}
-		\put(200,-280){\includegraphics[width=250pt]{source/logo-lightred.pdf}}
+		\put(200,-280){\includegraphics[width=250pt]{\imgpath /logo-lightred.pdf}}
 	\end{picture}
 	\put(5,-50){
 		\LARGE \textcolor{lightred}{\textbf{Спасибо за внимание!}}
@@ -206,7 +212,7 @@
     \begingroup
     \begin{frame}{Содержание}{}
     	\begin{picture}(0,0)
-    		\put(150,-300){\includegraphics[width=\paperheight]{source/logo-background}}
+    		\put(150,-300){\includegraphics[width=\paperheight]{\imgpath /logo-background.pdf}}
     	\end{picture}
         \tableofcontents[currentsection]
     \end{frame}
