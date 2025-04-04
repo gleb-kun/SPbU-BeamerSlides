@@ -42,6 +42,27 @@
 \end{lstlisting}
         \end{block}
     \end{frame}
+    
+    \begin{frame}[fragile]{Использование Beamer}
+   		Для использования данного шаблона необходимо подключить стилевой файл \texttt{spbu.sty}, который идет в комплекте:
+   		\begin{block}{Использование представленного шаблона}
+\begin{lstlisting}[language=TeX]
+\documentclass[10pt,aspectratio=169]{beamer}
+
+\usepackage{spbu}
+
+\usepackage[T2A]{fontenc}            % Внутренняя кодировка T2A
+\usepackage[utf8]{inputenc}          % Указывает, что main.tex в кодировке UTF-8
+\usepackage[english,russian]{babel}  % Подключает поддержку многоязычного текста
+
+\begin{document}
+	\maketitle
+	\begin{frame}{Hello, world!}
+	\end {frame}
+\end{document}
+\end{lstlisting}
+		\end{block}
+   	\end{frame}
 
     \begin{frame}[fragile]{Титульный слайд}
         Чтобы отобразить информацию на титульном слайде, необходимо вызвать несколько команд в преамбуле:
@@ -53,7 +74,7 @@
 \date{Дата, по умолчанию - сегодня}
 \end{lstlisting}
         \end{block}
-        Затем, после команды \verb|\begin{document}|, необходимо написать команду \verb|\maketitle|.
+        Затем, после команды \verb|\begin{document}|, необходимо написать команду \verb|\maketitle|, как было показано на предыдущем слайде.
     \end{frame}
 
     \begin{frame}[fragile]{Создание слайда с информацией}
