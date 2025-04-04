@@ -47,10 +47,10 @@
         Чтобы отобразить информацию на титульном слайде, необходимо вызвать несколько команд в преамбуле:
         \begin{block}{Команды для вывода информации на титульный слайд}
 \begin{lstlisting}[language=TeX]
-\title{Title}
-\subtitle{Subtitle}
-\author{First Author, Second Author}
-\date{Defaults to today's}
+\title{Заголовок}
+\subtitle{Подзаголовок}
+\author{Первый автор, Второй автор}
+\date{Дата, по умолчанию - сегодня}
 \end{lstlisting}
         \end{block}
         Затем, после команды \verb|\begin{document}|, необходимо написать команду \verb|\maketitle|.
@@ -62,8 +62,9 @@
         \begin{block}{Код для создания слайда}
             \begin{lstlisting}[language=TeX]
 \begin{frame}
-    \frametitle{Slide example}
-    \framesubtitle{Result}
+    \frametitle{Пример слайда}
+    \framesubtitle{Результат}
+    Содержание слайда...
 \end{frame}\end{lstlisting}
         \end{block}
         Результат представлен на следующем слайде.
@@ -72,8 +73,9 @@
     \end{frame}
 
     \begin{frame}
-        \frametitle{Slide example}
-        \framesubtitle{Result}
+        \frametitle{Пример слайда}
+        \framesubtitle{Результат}
+        Содержание слайда...
     \end{frame}
 
     \begin{frame}[fragile]{Добавление изображений}
@@ -137,12 +139,12 @@
 \begin{lstlisting}[language=TeX]
 \begin{columns}
     \begin{column}{0.6\textwidth}
-        This is the first column
+        Первый столбец.
     \end{column}
     \begin{column}{0.3\textwidth}
-        And this the second
+        Второй столбец.
     \end{column}
-    % There could be more!
+    % Может быть и больше!
 \end{columns}
 \end{lstlisting}
         \end{block}
@@ -150,10 +152,10 @@
         Далее представлен результат:
         \begin{columns}
             \begin{column}{0.6\textwidth}
-                First column.
+                Первый столбец.
             \end{column}
             \begin{column}{0.3\textwidth}
-                Second column.
+                Второй столбец.
             \end{column}
         \end{columns}
     \end{frame}
