@@ -96,6 +96,34 @@
             \end{column}
         \end{columns}
     \end{frame}
+    
+    \begin{frame}[fragile]{Добавление изображений}
+    	\framesubtitle{Подписи, метки, перекрестные ссылки для изображений}
+    	\begin{columns}
+    		\begin{column}{0.7\textwidth}
+    			Используем окружение \texttt{figure}, после этого можно добавить подпись для изображения, используя команду \texttt{\textbackslash caption}, и метку, используя команду \texttt{\textbackslash label}. 
+    			\begin{block}{Добавление изображения}
+\begin{lstlisting}[language=TeX]
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=\textwidth]{source/logo-name}
+	\caption{Подпись}
+	\label{fig:logo}
+\end{figure}
+\end{lstlisting}
+    			\end{block}
+    		\end{column}
+    		\begin{column}{0.3\textwidth}
+    			\begin{figure}[h!]
+    				\centering
+    				\includegraphics[width=\textwidth]{source/logo-name}
+    				\caption{Подпись}
+    				\label{fig:logo}
+    			\end{figure}
+    		\end{column}
+    	\end{columns}
+		Теперь можно сослаться на рис.~\ref{fig:logo}, используя команду \texttt{\textbackslash ref\{fig:logo\}}.
+    \end{frame}
 
     \begin{frame}[fragile]{Добавление формул}
         Формулы добавляются также как и в стандартном \LaTeX:
