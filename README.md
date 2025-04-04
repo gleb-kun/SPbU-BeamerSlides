@@ -8,7 +8,7 @@
 
 ### Основные файлы
 
-- `presentation.tex`: основной файл со слайдами.
+- `main.tex`: основной файл LaTeX с разметкой слайдов.
 - `spbu.sty`: файл, содержащий настройку стилей и цветов.
 
 ### Директории
@@ -38,7 +38,7 @@
     - `listings`
     - `colortbl`
 
-2. Скомпилируйте файл `presentation.tex` с использованием `pdflatex` или `xelatex`:
+2. Скомпилируйте файл `main.tex` с использованием `pdflatex` или `xelatex`:
 
    ```bash
    pdflatex main.tex
