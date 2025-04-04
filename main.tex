@@ -33,25 +33,25 @@
     \begin{frame}[fragile]{Использование Beamer}
         Для создания простейшего документа с использованием пакета Beamer достаточно воспользоваться следующим кодом:
         \begin{block}{Минимальный документ}
-            \begin{lstlisting}[language=TeX]
+\begin{lstlisting}[language=TeX]
 \documentclass{beamer}
 \begin{document}
     \begin{frame}{Hello, world!}
     \end {frame}
 \end{document}
-            \end{lstlisting}
+\end{lstlisting}
         \end{block}
     \end{frame}
 
     \begin{frame}[fragile]{Титульный слайд}
         Чтобы отобразить информацию на титульном слайде, необходимо вызвать несколько команд в преамбуле:
         \begin{block}{Команды для вывода информации на титульный слайд}
-            \begin{lstlisting}[language=TeX]
+\begin{lstlisting}[language=TeX]
 \title{Title}
 \subtitle{Subtitle}
 \author{First Author, Second Author}
 \date{Defaults to today's}
-            \end{lstlisting}
+\end{lstlisting}
         \end{block}
         Затем, после команды \verb|\begin{document}|, необходимо написать команду \verb|\maketitle|.
     \end{frame}
@@ -81,12 +81,12 @@
             \begin{column}{0.7\textwidth}
                 Добавление изображений работает как в стандартном \LaTeX:
                 \begin{block}{Добавление изображения}
-                    \begin{lstlisting}[language=TeX]
+\begin{lstlisting}[language=TeX]
 \usepackage{graphicx}
 % ...
 \includegraphics
 [width=\textwidth]{images/default}
-                    \end{lstlisting}
+\end{lstlisting}
                 \end{block}
             \end{column}
             \begin{column}{0.3\textwidth}
@@ -109,7 +109,7 @@
         \framesubtitle{Пример вынесенной формулы}
 
         \begin{block}{Добавление вынесенной формулы}
-            \begin{lstlisting}[language=TeX]
+\begin{lstlisting}[language=TeX]
 \begin{equation}
     \frac{\partial u}{\partial t}
     -a^2\left(\frac{\partial^2 u}{\partial x^2_1}
@@ -117,7 +117,7 @@
     +\ldots+\frac{\partial^2 u}{\partial x^2_n}\right)=f\left(x,t\right).
     \label{eq:eq1}
 \end{equation}
-            \end{lstlisting}
+\end{lstlisting}
         \end{block}
 
         Результат:
@@ -134,7 +134,7 @@
     \begin{frame}[fragile]{Разделение на столбцы}
         Разделение информации на столбцы осуществляется следующим способом
         \begin{block}{Разделение информации на столбцы}
-            \begin{lstlisting}[language=TeX]
+\begin{lstlisting}[language=TeX]
 \begin{columns}
     \begin{column}{0.6\textwidth}
         This is the first column
@@ -144,7 +144,7 @@
     \end{column}
     % There could be more!
 \end{columns}
-            \end{lstlisting}
+\end{lstlisting}
         \end{block}
 
         Далее представлен результат:
